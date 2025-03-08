@@ -1,4 +1,3 @@
-from fastapi import HTTPException, status
 from typing import List
 from app.database.db import collection
 from app.models.Item import Item
