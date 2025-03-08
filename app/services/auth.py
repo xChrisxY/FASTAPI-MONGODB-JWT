@@ -1,3 +1,5 @@
+from fastapi import Depends
+from fastapi.security import OAuth2AuthorizationCodeBearer
 from datetime import datetime, timedelta, timezone
 from jose import JWTError, jwt 
 from passlib.context import CryptContext 
@@ -29,3 +31,4 @@ def decode_access_token(token:str):
         return payload
     except JWTError:
         return None
+
